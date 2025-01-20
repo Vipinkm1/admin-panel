@@ -1,0 +1,135 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #333;
+  --secondary-color: #444;
+  --highlight-color: #00ff00;
+  --font-size: 16px;
+  --sidebar-width: 250px;
+
+}
+.homepage {
+  display: flex;
+  align-items: start;
+  transition: all 0.3s ease;
+}
+.dynamic {
+  flex-grow: 1;
+  transition: width 0.3s;
+}
+.dynamic-shrink {
+  width: calc(100% - 250px); 
+}
+/* sidebar */
+.sidebar {
+  width: 250px;
+  background: var(--primary-color);
+  color: white;
+  height: 100vh;
+  transition: width 0.3s;
+}
+.font{
+  font-size: var(--font-size);
+  padding: 20px 10px;
+}
+.list-item{
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: var(--font-size);
+}
+.sidebar.close {
+  width: 0;
+
+  overflow: hidden;
+}
+/* navbar */
+.navbar {
+  background: var(--secondary-color);
+  color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 30px;
+  height: 60px;
+}
+/* content */
+.dashboard{
+  padding: 10px;
+}
+.table-container{
+  margin: 20px auto;
+  width: 100%;
+  background-color: #f9f9f9;
+}
+table{
+  width: 100%;
+  border: 1px solid rgb(63, 61, 61);
+  text-align: center;
+  font-family: 'oswald', sans-serif;
+  padding: 5px;
+  border-radius: 2px;
+}
+th,td{
+  padding: 10px;
+}
+th{
+  background-color: #231414;
+  color: #fff;
+  font-weight: bold;
+}
+tr:nth-child(even){
+  background-color: #f9f9f9;
+}
+tr:hover {
+  background-color: #f1f1f1;
+}
+button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0056b3;
+}
+
+/* sideTop */
+.sideTop{
+  width: 100%;
+  background-color: rgba(60, 60, 60, 0.7  ); /* Semi-transparent background */
+  height: 100%;
+  z-index: 1050;
+  position: fixed;
+  display: flex;
+  align-items: start;
+  justify-content: end;
+  top: 0;
+  left: 0;
+ 
+}
+
+.rightSidebar{
+  border: 1px solid black;
+  width:  30%;
+  height: 100vh;
+  background-color: #fff;
+  border-radius: 2px;
+  padding: 10px;
+  
+}
+.title-flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
